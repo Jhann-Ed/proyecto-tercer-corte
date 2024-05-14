@@ -1,7 +1,6 @@
 package com.utadeo.proyecto.controller;
 
 import java.util.List;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +14,7 @@ import com.utadeo.proyecto.model.Employee;
 import com.utadeo.proyecto.service.IEmployeeService;
 
 @RestController
-@RequestMapping("employee")
+@RequestMapping("employee/")
 public class EmployeeController {
 
     private IEmployeeService employeeService;
@@ -34,7 +33,7 @@ public class EmployeeController {
         return employeeService.updateEmployee(id, employee);        
     }
 
-    @GetMapping("/{id}/")
+    @GetMapping("{id}/")
     public Employee show(@PathVariable("id") Long id){
         return this.employeeService.getEmployee(id);
     }
@@ -44,7 +43,7 @@ public class EmployeeController {
 		return employeeService.getAllEmployee();
 	}
 
-    @DeleteMapping("/delete/{id}/")
+    @DeleteMapping("delete/{id}/")
 	public void deleteUser(@PathVariable("id") Long id) {
 		this.employeeService.deleteEmployee(id);
 	}

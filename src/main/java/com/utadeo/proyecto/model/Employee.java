@@ -1,5 +1,6 @@
 package com.utadeo.proyecto.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,25 +15,25 @@ public class Employee {
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    @JoinColumn(name = "id")
+    @Column(name = "id")
     private Long id;
     
-    @JoinColumn(name = "name")
+    @Column(name = "name")
     private String name;
 
-    @JoinColumn(name = "last_name")
+    @Column(name = "last_name")
     private String lastName;
 
-    @JoinColumn(name = "email")
+    @Column(name = "email")
     private String email;
 
-    @JoinColumn(name = "adress")
+    @Column(name = "adress")
     private String adress;
 
-    @JoinColumn(name = "phone")
+    @Column(name = "phone")
     private long phone;
 
-    @JoinColumn(name = "salary")
+    @Column(name = "salary")
     private Long salary;
 
     @ManyToOne

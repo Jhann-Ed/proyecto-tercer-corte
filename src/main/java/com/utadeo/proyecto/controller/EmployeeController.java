@@ -39,12 +39,12 @@ public class EmployeeController {
     }
 
     @GetMapping("all/")
-    public List<Employee> GetAllUsers(){
+    public List<Employee> GetAllUEmployee(){
 		return employeeService.getAllEmployee();
 	}
 
     @DeleteMapping("delete/{id}/")
-	public void deleteUser(@PathVariable("id") Long id) {
+	public void DeleteEmployee(@PathVariable("id") Long id) {
 		this.employeeService.deleteEmployee(id);
 	}
 

@@ -39,7 +39,7 @@ dependencies {
 
 tasks.withType(Test) {
 	useJUnitPlatform()
-	exclude '**/com/programacion/avanzada/proyectotercercorte/**'
+	//exclude '**/com/programacion/avanzada/proyectotercercorte/**'
 }
 
 bootJar {
